@@ -1,7 +1,14 @@
-.App {
-  height: 100vh;
-}
 body {
   font-family: Ubuntu Condensed;
   padding: 20px 60px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
 }
