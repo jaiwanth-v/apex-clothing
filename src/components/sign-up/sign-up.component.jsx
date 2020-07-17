@@ -73,7 +73,7 @@ export default class SignUp extends Component {
             type="password"
             value={confirmPassword}
             name="confirmPassword"
-            label="Confirm Password"
+            label="Confirm  Password"
             required
           />
           <CustomButton type="submit">SIGN UP</CustomButton>
