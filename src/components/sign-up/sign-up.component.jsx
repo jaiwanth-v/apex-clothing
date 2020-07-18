@@ -46,11 +46,12 @@ export default class SignUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div>
-        <h2 className="title">I do not have an account </h2>
+        <h2 className="title">I don't have an account </h2>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             value={displayName}
+            handleChange={this.handleChange}
             name="displayName"
             label="Display Name"
             required
@@ -58,6 +59,7 @@ export default class SignUp extends Component {
           <FormInput
             type="email"
             value={email}
+            handleChange={this.handleChange}
             name="email"
             label="Email"
             required
@@ -65,13 +67,15 @@ export default class SignUp extends Component {
           <FormInput
             type="password"
             value={password}
+            handleChange={this.handleChange}
             name="password"
-            label="password"
+            label="Password"
             required
           />
           <FormInput
             type="password"
             value={confirmPassword}
+            handleChange={this.handleChange}
             name="confirmPassword"
             label="Confirm  Password"
             required
