@@ -1,5 +1,3 @@
-/* Used as starting data for ShopPage */
-
 const SHOP_DATA = [
   {
     id: 1,

@@ -7,8 +7,8 @@ const CollectionPreview = ({ title, items }) => (
   <div className="collection-preview">
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
-      {items.map(({ id, ...itemProps }, idx) => {
-        if (idx < 4) return <CollectionItem key={id} {...itemProps} />;
+      {items.map((item, idx) => {
+        if (idx < 4) return <CollectionItem key={item.id} item={item} />;
         else return "";
       })}
     </div>
