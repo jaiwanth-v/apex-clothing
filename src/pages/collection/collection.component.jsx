@@ -1,4 +1,4 @@
-import "./category.styles.scss";
+import "./collection.styles.scss";
 
 import React from "react";
 import { connect } from "react-redux";
