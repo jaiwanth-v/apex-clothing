@@ -8,9 +8,15 @@
   }
 
   .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    // display: grid;
+    // grid-gap: 0.1rem;
+    // //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    // grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    // grid-auto-rows: minmax(26px, 190px);
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
     & .collection-item {
       margin-bottom: 30px;

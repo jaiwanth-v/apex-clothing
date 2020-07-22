@@ -188,6 +188,13 @@ const SHOP_DATA = {
         price: 45,
       },
       {
+        id: 36,
+        name: "Red and Black Checks",
+        imageUrl:
+          "https://images.unsplash.com/photo-1482849297070-f4fae2173efe?ixlib=rb-1.2.1&w=1000&q=80",
+        price: 25,
+      },
+      {
         id: 28,
         name: "Yellow Track Suit",
         imageUrl: "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
@@ -210,14 +217,9 @@ const SHOP_DATA = {
         id: 30,
         name: "Camo Down Vest",
         imageUrl: "https://i.ibb.co/xJS0T3Y/camo-vest.png",
-        price: 325,
+        price: 35,
       },
-      {
-        id: 31,
-        name: "Floral T-shirt",
-        imageUrl: "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
-        price: 20,
-      },
+
       {
         id: 32,
         name: "Black & White Longsleeve",

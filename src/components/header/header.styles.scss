@@ -8,7 +8,10 @@
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding-top: 0.5rem;
+    .logo {
+      width: 8vw;
+    }
   }
 
   .options {
@@ -19,8 +22,13 @@
     justify-content: flex-end;
 
     .option {
+      white-space: nowrap;
       cursor: pointer;
       padding: 10px 15px;
+      @media screen and (max-width: 556px) {
+        font-size: 3vw;
+        padding: 2vw 2vw;
+      }
     }
   }
 }

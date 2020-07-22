@@ -3,9 +3,13 @@
   display: flex;
   min-height: 100px;
   border-bottom: 1px solid darkgrey;
-  padding: 15px 0;
-  font-size: 20px;
+  padding: 1rem 0;
+  font-size: 1rem;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    font-size: 0.7rem;
+    padding: 0rem;
+  }
 
   .image-container {
     width: 23%;
@@ -20,15 +24,20 @@
   .quantity,
   .price {
     width: 23%;
+    font-size: 1.2rem;
   }
 
   .quantity {
     display: flex;
     .arrow {
       cursor: pointer;
+      font-size: 1rem;
     }
     .value {
       margin: 0 10px;
+      @media screen and (max-width: 800px) {
+        margin: 0 3px;
+      }
     }
   }
 
