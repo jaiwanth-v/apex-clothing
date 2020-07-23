@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./collection-item.styles.scss";
 import CustomButton from "../custom-button/custom-button.component";
@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.actions";
 
 const CollectionItem = ({ item, addItem }) => {
+  const [clicked, setClicked] = useState(false);
   const { name, imageUrl, price } = item;
   return (
     <div className="collection-item">
@@ -17,8 +18,15 @@ const CollectionItem = ({ item, addItem }) => {
         <span className="name"> {name} </span>
         <span className="price"> ${price} </span>
       </div>
-      <CustomButton inverted onClick={() => addItem(item)}>
-        Add to cart
+      <CustomButton
+        inverted
+        onClick={() => {
+          addItem(item);
+          setClicked(true);
+          setTimeout(() => setClicked(false), 1000);
+        }}
+      >
+        {clicked ? <p>&#10003; Added to cart</p> : <p>Add to cart</p>}
       </CustomButton>
     </div>
   );
