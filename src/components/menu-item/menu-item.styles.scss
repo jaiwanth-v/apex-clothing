@@ -1,6 +1,6 @@
 .menu-item {
   min-width: 30%;
-  height: 320px;
+  height: 30vh;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -10,8 +10,8 @@
   background-size: cover;
   overflow: hidden;
   @media screen and (max-width: 1500px) {
-    height: 300px;
-    width: 200px;
+    height: 40vh;
+    width: 33vw;
   }
 
   &:hover {
@@ -25,11 +25,11 @@
     }
   }
   &.large {
-    height: 450px;
+    height: 50vh;
   }
   @media screen and (max-width: 1500px) {
     &.large {
-      height: 300px;
+      height: 40vh;
     }
   }
 
@@ -64,11 +64,17 @@
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
+      @media screen and (max-width: 1000px) {
+        font-size: 16px;
+      }
     }
 
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+      @media screen and (max-width: 1000px) {
+        font-size: 10px;
+      }
     }
   }
 }

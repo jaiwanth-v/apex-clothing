@@ -2,6 +2,11 @@ body {
   font-family: Ubuntu Condensed, sans-serif;
   padding: 20px 60px;
 }
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 1rem;
+  }
+}
 
 a,
 a:hover {

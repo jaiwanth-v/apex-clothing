@@ -25,6 +25,9 @@
   .price {
     width: 23%;
     font-size: 1.2rem;
+    @media screen and (max-width: 800px) {
+      font-size: 0.8rem;
+    }
   }
 
   .quantity {
@@ -32,6 +35,9 @@
     .arrow {
       cursor: pointer;
       font-size: 1rem;
+      @media screen and (max-width: 800px) {
+        font-size: 0.7rem;
+      }
     }
     .value {
       margin: 0 10px;
