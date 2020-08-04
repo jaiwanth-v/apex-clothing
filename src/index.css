@@ -12,34 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* html,
-body,
-:not([style*="background-color:"]):not(#Capa_1) {
-  background-color: #121212 !important;
-  border: white;
-}
-html,
-body,
-:not([style*="color:"]) {
-  color: rgb(225, 219, 219) !important;
-}
-
-:not([style*="border-color:"]),
-::before,
-::after {
-  border-color: rgb(255, 255, 255) !important;
-}
-custom-button.google-sign-in {
-  background-color: #4285f4 !important;
-  color: white;
-}
-
-:not([style*="border-color:"]),
-::before,
-::after {
-  border-top-color: rgb(48, 52, 54) !important;
-  border-right-color: rgb(48, 52, 54) !important;
-  border-bottom-color: rgb(48, 52, 54) !important;
-  border-left-color: rgb(48, 52, 54) !important;
-} */
