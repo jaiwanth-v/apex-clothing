@@ -1,10 +1,14 @@
 body {
-  font-family: Ubuntu Condensed, sans-serif;
-  padding: 20px 60px;
+  font-family: "Ubuntu Condensed", sans-serif;
+
+  font-size: 1rem;
+  padding: 20px 40px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   body {
     padding-top: 1rem;
+    padding: unset;
+    margin: 0 1rem;
   }
 }
 

@@ -3,6 +3,7 @@ import "./sign-up.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
+import Loader from "react-loader-spinner";
 
 export default class SignUp extends Component {
   state = {
@@ -10,13 +11,19 @@ export default class SignUp extends Component {
     email: "",
     password: "",
     confirmPassword: "",
+    message: "",
+    isLoading: false,
   };
 
   handleSubmit = async (event) => {
+    this.setState({ isLoading: true, message: "" });
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
     if (password !== confirmPassword) {
-      alert("passwords don't match");
+      this.setState({
+        message: "Passwords didn't match. Try again.",
+        isLoading: false,
+      });
       return;
     }
     try {
@@ -33,7 +40,7 @@ export default class SignUp extends Component {
         confirmPassword: "",
       });
     } catch (error) {
-      console.log(error);
+      this.setState({ message: error.message, isLoading: false });
     }
   };
 
@@ -45,8 +52,9 @@ export default class SignUp extends Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <div>
+      <div className="sign-up">
         <h2 className="title">I don't have an account </h2>
+        <span>Sign up with your email and password</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
@@ -80,7 +88,25 @@ export default class SignUp extends Component {
             label="Confirm  Password"
             required
           />
-          <CustomButton type="submit">SIGN UP</CustomButton>
+          {this.state.isLoading ? (
+            <div className="d-flex justify-content-between">
+              <h5>Logging In</h5>
+              <Loader
+                className="ml-3"
+                type="ThreeDots"
+                color="rgb(93, 124, 219)"
+                height={25}
+                width={35}
+              />
+            </div>
+          ) : (
+            <CustomButton type="submit">SIGN UP</CustomButton>
+          )}
+          {this.state.message && (
+            <p style={{ color: "rgb(255, 21, 21)" }}>
+              <br /> {this.state.message}
+            </p>
+          )}
         </form>
       </div>
     );

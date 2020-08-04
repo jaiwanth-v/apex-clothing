@@ -8,26 +8,33 @@ import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { hideCart } from "../../redux/cart/cart.actions";
 
-const Header = ({ currentUser, hidden }) => {
+const Header = ({ currentUser, hidden, hideCart }) => {
   return (
     <div className="header">
-      <Link to="/" className="logo-container">
+      <Link onClick={() => hideCart()} to="/" className="logo-container">
         <Logo className="logo" />
       </Link>
       <div className="options">
-        <Link className="option" to="/shop">
+        <Link onClick={() => hideCart()} className="option" to="/shop">
           SHOP
         </Link>
-        <Link className="option" to="/contact">
+        <Link onClick={() => hideCart()} className="option" to="/contact">
           CONTACT
         </Link>
         {currentUser ? (
-          <div className="option" onClick={() => auth.signOut()}>
+          <div
+            className="option"
+            onClick={() => {
+              auth.signOut();
+              hideCart();
+            }}
+          >
             SIGN OUT
           </div>
         ) : (
-          <Link className="option" to="/signin">
+          <Link onClick={() => hideCart()} className="option" to="/signin">
             SIGN IN
           </Link>
         )}
@@ -44,4 +51,8 @@ const mapStateToProps = (state) => ({
   hidden: selectCartHidden(state),
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  hideCart: () => dispatch(hideCart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
