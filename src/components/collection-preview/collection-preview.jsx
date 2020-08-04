@@ -8,8 +8,7 @@ const CollectionPreview = ({ title, items }) => (
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
       {items.map((item, idx) => {
-        if (idx < 4) return <CollectionItem key={item.id} item={item} />;
-        else return "";
+        return idx < 4 && <CollectionItem key={item.id} item={item} />;
       })}
     </div>
   </div>

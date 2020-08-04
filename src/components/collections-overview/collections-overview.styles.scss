@@ -1,4 +1,8 @@
 .collections-overview {
   display: flex;
+  margin-left: 3.5rem;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    align-items: center;
+  }
 }
