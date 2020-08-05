@@ -21,8 +21,13 @@
     align-items: center;
     justify-content: flex-end;
 
+    @media screen and (max-width: 650px) {
+      width: fit-content;
+    }
+
     .option {
       white-space: nowrap;
+      transform: scale(0.95, 1);
       cursor: pointer;
       padding: 10px 15px;
       @media screen and (max-width: 556px) {

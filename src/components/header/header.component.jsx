@@ -34,12 +34,12 @@ const Header = ({ currentUser, hidden, hideCart }) => {
       </Link>
       <div className="options">
         <DarkModeSwitch
-          className="mr-3"
+          className="mr-2 mr-md-3 mb-1 mb-sm-0"
           sunColor={""}
           moonColor={"rgba(59,56,56,0.7)"}
           onClick={toggleDarkMode}
           checked={!isDark}
-          size={20}
+          size={window.matchMedia("(max-width: 800px)").matches ? 17 : 20}
         />
         <Link onClick={() => hideCart()} className="option" to="/shop">
           SHOP

@@ -24,7 +24,6 @@ export default class SignIn extends Component {
       this.setState({ email: "", password: "" });
     } catch (error) {
       this.setState({ isValid: false, isLoading: false });
-      console.log(error);
     }
   };
 
