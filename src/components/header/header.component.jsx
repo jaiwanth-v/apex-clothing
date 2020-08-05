@@ -34,7 +34,8 @@ const Header = ({ currentUser, hidden, hideCart }) => {
       </Link>
       <div className="options">
         <DarkModeSwitch
-          className="mr-2 mr-md-3 mb-1 mb-sm-0"
+          // className="mr-2 mr-md-3 mb-1"
+          style={{ margin: "0 1.2rem 0.1rem " }}
           sunColor={""}
           moonColor={"rgba(59,56,56,0.7)"}
           onClick={toggleDarkMode}
