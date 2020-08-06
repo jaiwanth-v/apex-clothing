@@ -10,6 +10,7 @@
     width: 70px;
     padding-top: 0.5rem;
     .logo {
+      margin: 0.2rem 0 0 0.4rem;
       width: 8vw;
     }
   }
@@ -20,7 +21,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    .darkmode {
+      margin: 0rem 1.25rem 0.1rem 0rem;
+      @media screen and (max-width: 650px) {
+        margin: 0rem 0.8rem 0.35rem 0rem;
+      }
+    }
     @media screen and (max-width: 650px) {
       width: fit-content;
     }
@@ -31,8 +37,9 @@
       cursor: pointer;
       padding: 10px 15px;
       @media screen and (max-width: 556px) {
-        font-size: 3vw;
+        font-size: 3.2vw;
         padding: 2vw 2vw;
+        transform: scale(0.85, 1);
       }
     }
   }
