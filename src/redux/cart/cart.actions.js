@@ -8,6 +8,10 @@ export const hideCart = () => ({
   type: CartActionTypes.HIDE_CART,
 });
 
+export const clearCart = () => ({
+  type: CartActionTypes.CLEAR_CART,
+});
+
 export const addItem = (item) => {
   return {
     type: CartActionTypes.ADD_ITEM,
